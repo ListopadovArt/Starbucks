@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		AFC90EDF28888D5100F3EE21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC90EDE28888D5100F3EE21 /* AppDelegate.swift */; };
-		AFC90EE328888D5100F3EE21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC90EE228888D5100F3EE21 /* ViewController.swift */; };
+		AFC90EE328888D5100F3EE21 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC90EE228888D5100F3EE21 /* HomeViewController.swift */; };
 		AFC90EE828888D5400F3EE21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC90EE728888D5400F3EE21 /* Assets.xcassets */; };
 		AFC90EEB28888D5400F3EE21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC90EE928888D5400F3EE21 /* LaunchScreen.storyboard */; };
+		AFC90EF32888967C00F3EE21 /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC90EF22888967C00F3EE21 /* Factories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AFC90EDB28888D5100F3EE21 /* Starbucks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starbucks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC90EDE28888D5100F3EE21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFC90EE228888D5100F3EE21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFC90EE228888D5100F3EE21 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AFC90EE728888D5400F3EE21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFC90EEA28888D5400F3EE21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFC90EEC28888D5400F3EE21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFC90EF22888967C00F3EE21 /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				AFC90EDE28888D5100F3EE21 /* AppDelegate.swift */,
-				AFC90EE228888D5100F3EE21 /* ViewController.swift */,
+				AFC90EF22888967C00F3EE21 /* Factories.swift */,
+				AFC90EE228888D5100F3EE21 /* HomeViewController.swift */,
 				AFC90EE728888D5400F3EE21 /* Assets.xcassets */,
 				AFC90EE928888D5400F3EE21 /* LaunchScreen.storyboard */,
 				AFC90EEC28888D5400F3EE21 /* Info.plist */,
@@ -131,7 +134,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFC90EE328888D5100F3EE21 /* ViewController.swift in Sources */,
+				AFC90EF32888967C00F3EE21 /* Factories.swift in Sources */,
+				AFC90EE328888D5100F3EE21 /* HomeViewController.swift in Sources */,
 				AFC90EDF28888D5100F3EE21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
