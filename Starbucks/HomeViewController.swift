@@ -10,20 +10,26 @@ import UIKit
 class HomeViewController: StarBucksViewController {
     
     let headerView = HomeHeaderView()
-    let tableView = UITableView()
-    
     var headerViewTopConstraint: NSLayoutConstraint?
+    let scrollView = UIScrollView()
+    let rootStackView = UIStackView()
     
-    let cellId = "cellId"
-    let tiles = ["Star balance","Bonus stars","Try these","Welcome back","Uplifting"]
-    
+    let tiles = [TileView("Star balance"),
+                 TileView("Bonus stars"),
+                 TileView("Try these"),
+                 TileView("Welcome back"),
+                 TileView("Uplifting")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupScrollView()
         setTabBarImage(imageName: "house.fill", title: "Home")
-        setupTableView()
         style()
         layout()
+    }
+    
+    private func setupScrollView(){
+        scrollView.delegate = self
     }
 }
 
@@ -33,59 +39,49 @@ extension HomeViewController {
     private func style() {
         headerView.translatesAutoresizingMaskIntoConstraints = false
         headerView.backgroundColor = .systemCyan
-        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        
+        rootStackView.translatesAutoresizingMaskIntoConstraints = false
+        rootStackView.axis = .vertical
+        rootStackView.spacing = 8
     }
     
     private func layout() {
         view.addSubview(headerView)
-        view.addSubview(tableView)
+        view.addSubview(scrollView)
+        
+        scrollView.addSubview(rootStackView)
+        
+        for tile in tiles{
+            addChild(tile)
+            rootStackView.addArrangedSubview(tile.view)
+            tile.didMove(toParent: self) 
+        }
         
         headerViewTopConstraint = headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
         
         NSLayoutConstraint.activate([
-            //            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             headerViewTopConstraint!,
             headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             
-            tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            scrollView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 8),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            
+            rootStackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            rootStackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            rootStackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            rootStackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            rootStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
         ])
     }
 }
 
-//MARK: - TableView DataSource
-extension HomeViewController: UITableViewDataSource {
-    
-    func setupTableView() {
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
-        tableView.tableFooterView = UIView()
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tiles.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        
-        cell.textLabel?.text = tiles[indexPath.row]
-        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
-        return cell
-    }
-}
-
 // MARK: Animating scrollView
-
-extension HomeViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
-    }
+extension HomeViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let y = scrollView.contentOffset.y
