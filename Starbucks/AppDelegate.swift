@@ -27,7 +27,6 @@ class StarBucksViewController: UIViewController {
         let image = UIImage(systemName: imageName, withConfiguration: configuration)
         tabBarItem = UITabBarItem(title: title, image: image, tag: 0)
     }
-    
 }
 
 
@@ -94,15 +93,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let giftVC = GiftViewController()
         let storeVC = StoreViewController()
         
-        let homeNC = UINavigationController(rootViewController: homeVC)
         let scanNC = UINavigationController(rootViewController: scanVC)
         let orderNC = UINavigationController(rootViewController: orderVC)
         let giftNC = UINavigationController(rootViewController: giftVC)
         let storeNC = UINavigationController(rootViewController: storeVC)
         
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [homeNC, scanNC, orderNC, giftNC, storeNC]
+        tabBarController.viewControllers = [homeVC, scanNC, orderNC, giftNC, storeNC]
         window?.rootViewController = tabBarController
+        
+        tabBarController.tabBar.tintColor = .lightGreen
+        tabBarController.tabBar.isTranslucent = false
         
         return true
     }

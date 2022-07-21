@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF915F25288920AF00D4A785 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF915F24288920AF00D4A785 /* HomeHeaderView.swift */; };
 		AFC90EDF28888D5100F3EE21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC90EDE28888D5100F3EE21 /* AppDelegate.swift */; };
 		AFC90EE328888D5100F3EE21 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC90EE228888D5100F3EE21 /* HomeViewController.swift */; };
 		AFC90EE828888D5400F3EE21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC90EE728888D5400F3EE21 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF915F24288920AF00D4A785 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		AFC90EDB28888D5100F3EE21 /* Starbucks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starbucks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC90EDE28888D5100F3EE21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFC90EE228888D5100F3EE21 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF915F2228891FC900D4A785 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFC90EE728888D5400F3EE21 /* Assets.xcassets */,
+				AFC90EE928888D5400F3EE21 /* LaunchScreen.storyboard */,
+				AFC90EEC28888D5400F3EE21 /* Info.plist */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
+		AF915F2328891FEA00D4A785 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AFC90EE228888D5100F3EE21 /* HomeViewController.swift */,
+				AF915F24288920AF00D4A785 /* HomeHeaderView.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 		AFC90ED228888D5100F3EE21 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +75,10 @@
 		AFC90EDD28888D5100F3EE21 /* Starbucks */ = {
 			isa = PBXGroup;
 			children = (
+				AF915F2228891FC900D4A785 /* Files */,
 				AFC90EDE28888D5100F3EE21 /* AppDelegate.swift */,
 				AFC90EF22888967C00F3EE21 /* Factories.swift */,
-				AFC90EE228888D5100F3EE21 /* HomeViewController.swift */,
-				AFC90EE728888D5400F3EE21 /* Assets.xcassets */,
-				AFC90EE928888D5400F3EE21 /* LaunchScreen.storyboard */,
-				AFC90EEC28888D5400F3EE21 /* Info.plist */,
+				AF915F2328891FEA00D4A785 /* Home */,
 			);
 			path = Starbucks;
 			sourceTree = "<group>";
@@ -134,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF915F25288920AF00D4A785 /* HomeHeaderView.swift in Sources */,
 				AFC90EF32888967C00F3EE21 /* Factories.swift in Sources */,
 				AFC90EE328888D5100F3EE21 /* HomeViewController.swift in Sources */,
 				AFC90EDF28888D5100F3EE21 /* AppDelegate.swift in Sources */,
