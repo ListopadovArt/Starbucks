@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF2DDC8C288992E700B75020 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2DDC8B288992E700B75020 /* TileView.swift */; };
+		AF6201C5288A6F4A00229553 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6201C4288A6F4A00229553 /* TileViewController.swift */; };
+		AF6201C7288A6FA400229553 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6201C6288A6FA400229553 /* TileView.swift */; };
 		AF915F25288920AF00D4A785 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF915F24288920AF00D4A785 /* HomeHeaderView.swift */; };
 		AFC90EDF28888D5100F3EE21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC90EDE28888D5100F3EE21 /* AppDelegate.swift */; };
 		AFC90EE328888D5100F3EE21 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC90EE228888D5100F3EE21 /* HomeViewController.swift */; };
@@ -17,7 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AF2DDC8B288992E700B75020 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		AF6201C4288A6F4A00229553 /* TileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewController.swift; sourceTree = "<group>"; };
+		AF6201C6288A6FA400229553 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		AF915F24288920AF00D4A785 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		AFC90EDB28888D5100F3EE21 /* Starbucks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starbucks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC90EDE28888D5100F3EE21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +56,8 @@
 			children = (
 				AFC90EE228888D5100F3EE21 /* HomeViewController.swift */,
 				AF915F24288920AF00D4A785 /* HomeHeaderView.swift */,
-				AF2DDC8B288992E700B75020 /* TileView.swift */,
+				AF6201C4288A6F4A00229553 /* TileViewController.swift */,
+				AF6201C6288A6FA400229553 /* TileView.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -157,9 +160,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF915F25288920AF00D4A785 /* HomeHeaderView.swift in Sources */,
+				AF6201C7288A6FA400229553 /* TileView.swift in Sources */,
 				AFC90EF32888967C00F3EE21 /* Factories.swift in Sources */,
+				AF6201C5288A6F4A00229553 /* TileViewController.swift in Sources */,
 				AFC90EE328888D5100F3EE21 /* HomeViewController.swift in Sources */,
-				AF2DDC8C288992E700B75020 /* TileView.swift in Sources */,
 				AFC90EDF28888D5100F3EE21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

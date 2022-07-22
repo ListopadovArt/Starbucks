@@ -14,11 +14,17 @@ class HomeViewController: StarBucksViewController {
     let scrollView = UIScrollView()
     let rootStackView = UIStackView()
     
-    let tiles = [TileView("Star balance"),
-                 TileView("Bonus stars"),
-                 TileView("Try these"),
-                 TileView("Welcome back"),
-                 TileView("Uplifting")]
+    let tiles = [
+        TileViewController(title: "Breakfast made meatless",
+                           subtitle: "Try the Beyond Meat, Cheddar & Egg Breakfast Sandwich. Vegetarian and protein-packed.",
+                           imageName: "meatless"),
+        TileViewController(title: "Uplifting our communities",
+                           subtitle: "Thanks to our partners' nominations, The Starbucks Foundation is donating $145K to more than 50 local charities.",
+                           imageName: "communities"),
+        TileViewController(title: "Spend at least $15 for 50 Bonus Stars",
+                           subtitle: "Collect 50 Bonus Stars when you spend at least $15 pre-tax.",
+                           imageName: "bonus"),
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +44,7 @@ extension HomeViewController {
     
     private func style() {
         headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.backgroundColor = .systemCyan
-        
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        
         rootStackView.translatesAutoresizingMaskIntoConstraints = false
         rootStackView.axis = .vertical
         rootStackView.spacing = 8
@@ -56,7 +59,7 @@ extension HomeViewController {
         for tile in tiles{
             addChild(tile)
             rootStackView.addArrangedSubview(tile.view)
-            tile.didMove(toParent: self) 
+            tile.didMove(toParent: self)
         }
         
         headerViewTopConstraint = headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
