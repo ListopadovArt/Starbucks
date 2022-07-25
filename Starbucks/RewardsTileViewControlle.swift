@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RewardTileViewController: UIViewController {
+class RewardsTileViewController: UIViewController {
     
     let rewardsTileView = RewardsTileView()
     
@@ -18,7 +18,7 @@ class RewardTileViewController: UIViewController {
     }
 }
 
-extension RewardTileViewController {
+extension RewardsTileViewController {
     func style() {
         rewardsTileView.translatesAutoresizingMaskIntoConstraints = false
     }

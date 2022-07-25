@@ -11,7 +11,7 @@ class RewardsTileView: UIView {
     
     let balanceView = BalanceView()
     var rewardsButton = UIButton()
-    let rewardsGraphView = UIView()
+    let rewardsGraphView = RewardsGraphView()
     let starRewardsView = UIView()
     var detailsButton = UIButton()
     
@@ -37,7 +37,6 @@ extension RewardsTileView {
         starRewardsView.translatesAutoresizingMaskIntoConstraints = false
         
         makeRewardsOptionButton()
-        rewardsGraphView.backgroundColor = .systemCyan
         detailsButton = makeClearButton(withText: "Details")
     }
     
@@ -76,8 +75,7 @@ extension RewardsTileView {
             
             rewardsGraphView.topAnchor.constraint(equalToSystemSpacingBelow: balanceView.bottomAnchor, multiplier: 1),
             rewardsGraphView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            //            rewardsGraphView.widthAnchor.constraint(equalToConstant: frame.width),
-            rewardsGraphView.heightAnchor.constraint(equalToConstant: 300),
+            rewardsGraphView.widthAnchor.constraint(equalToConstant: frame.width),
             rewardsGraphView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
             trailingAnchor.constraint(equalToSystemSpacingAfter: rewardsGraphView.trailingAnchor, multiplier: 2),
             
@@ -89,5 +87,13 @@ extension RewardsTileView {
             detailsButton.leadingAnchor.constraint(equalTo: balanceView.leadingAnchor),
             bottomAnchor.constraint(equalToSystemSpacingBelow: detailsButton.bottomAnchor, multiplier: 2),
         ])
+    }
+    
+    // Redraw our graph once we know our actual device width & height
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        rewardsGraphView.actualFrameWidth = frame.width
+        rewardsGraphView.drawRewardsGraph()
     }
 }
