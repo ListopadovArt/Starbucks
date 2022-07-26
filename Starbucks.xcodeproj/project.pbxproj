@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2905EA289011EE004DB35A /* StarAndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2905E9289011EE004DB35A /* StarAndPoints.swift */; };
+		AF2905EC289012DC004DB35A /* StarRewardsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2905EB289012DC004DB35A /* StarRewardsRow.swift */; };
+		AF2905EE28901511004DB35A /* StarRewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2905ED28901511004DB35A /* StarRewardsView.swift */; };
 		AF485484288EC53900B694D4 /* RewardsTileViewControlle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF485483288EC53900B694D4 /* RewardsTileViewControlle.swift */; };
 		AF6201C5288A6F4A00229553 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6201C4288A6F4A00229553 /* TileViewController.swift */; };
 		AF6201C7288A6FA400229553 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6201C6288A6FA400229553 /* TileView.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF2905E9289011EE004DB35A /* StarAndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarAndPoints.swift; sourceTree = "<group>"; };
+		AF2905EB289012DC004DB35A /* StarRewardsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRewardsRow.swift; sourceTree = "<group>"; };
+		AF2905ED28901511004DB35A /* StarRewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRewardsView.swift; sourceTree = "<group>"; };
 		AF485483288EC53900B694D4 /* RewardsTileViewControlle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsTileViewControlle.swift; sourceTree = "<group>"; };
 		AF6201C4288A6F4A00229553 /* TileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewController.swift; sourceTree = "<group>"; };
 		AF6201C6288A6FA400229553 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
@@ -49,6 +55,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF2905E828901171004DB35A /* StarRewards */ = {
+			isa = PBXGroup;
+			children = (
+				AF2905E9289011EE004DB35A /* StarAndPoints.swift */,
+				AF2905EB289012DC004DB35A /* StarRewardsRow.swift */,
+				AF2905ED28901511004DB35A /* StarRewardsView.swift */,
+			);
+			name = StarRewards;
+			sourceTree = "<group>";
+		};
 		AF485482288EC4EC00B694D4 /* Rewards */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +89,7 @@
 		AF915F2328891FEA00D4A785 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AF2905E828901171004DB35A /* StarRewards */,
 				AF485482288EC4EC00B694D4 /* Rewards */,
 				AFC90EE228888D5100F3EE21 /* HomeViewController.swift */,
 				AF915F24288920AF00D4A785 /* HomeHeaderView.swift */,
@@ -180,9 +197,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF915F25288920AF00D4A785 /* HomeHeaderView.swift in Sources */,
+				AF2905EC289012DC004DB35A /* StarRewardsRow.swift in Sources */,
 				AFBA4121288EC5AE0045BA53 /* RewardsTileView.swift in Sources */,
 				AF6201C7288A6FA400229553 /* TileView.swift in Sources */,
 				AF485484288EC53900B694D4 /* RewardsTileViewControlle.swift in Sources */,
+				AF2905EE28901511004DB35A /* StarRewardsView.swift in Sources */,
+				AF2905EA289011EE004DB35A /* StarAndPoints.swift in Sources */,
 				AFC90EF32888967C00F3EE21 /* Factories.swift in Sources */,
 				AF6201C5288A6F4A00229553 /* TileViewController.swift in Sources */,
 				AFBA4123288EC8BC0045BA53 /* BalanceView.swift in Sources */,
