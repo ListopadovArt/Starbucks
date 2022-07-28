@@ -22,6 +22,11 @@
 		AFC90EE828888D5400F3EE21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC90EE728888D5400F3EE21 /* Assets.xcassets */; };
 		AFC90EEB28888D5400F3EE21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC90EE928888D5400F3EE21 /* LaunchScreen.storyboard */; };
 		AFC90EF32888967C00F3EE21 /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC90EF22888967C00F3EE21 /* Factories.swift */; };
+		AFD3FF4B2892BE89000A0F2C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3FF4A2892BE89000A0F2C /* HistoryViewController.swift */; };
+		AFD3FF4D2892BEBC000A0F2C /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3FF4C2892BEBC000A0F2C /* HistoryViewModel.swift */; };
+		AFD3FF4F2892BED6000A0F2C /* HistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3FF4E2892BED6000A0F2C /* HistoryViewCell.swift */; };
+		AFD3FF512892BEFA000A0F2C /* HistoryTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3FF502892BEFA000A0F2C /* HistoryTransaction.swift */; };
+		AFD3FF532892BF11000A0F2C /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3FF522892BF11000A0F2C /* HistoryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		AFC90EEA28888D5400F3EE21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFC90EEC28888D5400F3EE21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFC90EF22888967C00F3EE21 /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
+		AFD3FF4A2892BE89000A0F2C /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		AFD3FF4C2892BEBC000A0F2C /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		AFD3FF4E2892BED6000A0F2C /* HistoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewCell.swift; sourceTree = "<group>"; };
+		AFD3FF502892BEFA000A0F2C /* HistoryTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTransaction.swift; sourceTree = "<group>"; };
+		AFD3FF522892BF11000A0F2C /* HistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +99,7 @@
 		AF915F2328891FEA00D4A785 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AFD3FF492892BE68000A0F2C /* HistoryTile */,
 				AF2905E828901171004DB35A /* StarRewards */,
 				AF485482288EC4EC00B694D4 /* Rewards */,
 				AFC90EE228888D5100F3EE21 /* HomeViewController.swift */,
@@ -124,6 +135,18 @@
 				AF915F2328891FEA00D4A785 /* Home */,
 			);
 			path = Starbucks;
+			sourceTree = "<group>";
+		};
+		AFD3FF492892BE68000A0F2C /* HistoryTile */ = {
+			isa = PBXGroup;
+			children = (
+				AFD3FF4A2892BE89000A0F2C /* HistoryViewController.swift */,
+				AFD3FF4C2892BEBC000A0F2C /* HistoryViewModel.swift */,
+				AFD3FF4E2892BED6000A0F2C /* HistoryViewCell.swift */,
+				AFD3FF502892BEFA000A0F2C /* HistoryTransaction.swift */,
+				AFD3FF522892BF11000A0F2C /* HistoryService.swift */,
+			);
+			name = HistoryTile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,12 +224,17 @@
 				AFBA4121288EC5AE0045BA53 /* RewardsTileView.swift in Sources */,
 				AF6201C7288A6FA400229553 /* TileView.swift in Sources */,
 				AF485484288EC53900B694D4 /* RewardsTileViewControlle.swift in Sources */,
+				AFD3FF4B2892BE89000A0F2C /* HistoryViewController.swift in Sources */,
 				AF2905EE28901511004DB35A /* StarRewardsView.swift in Sources */,
 				AF2905EA289011EE004DB35A /* StarAndPoints.swift in Sources */,
 				AFC90EF32888967C00F3EE21 /* Factories.swift in Sources */,
 				AF6201C5288A6F4A00229553 /* TileViewController.swift in Sources */,
+				AFD3FF532892BF11000A0F2C /* HistoryService.swift in Sources */,
+				AFD3FF4D2892BEBC000A0F2C /* HistoryViewModel.swift in Sources */,
 				AFBA4123288EC8BC0045BA53 /* BalanceView.swift in Sources */,
 				AFC90EE328888D5100F3EE21 /* HomeViewController.swift in Sources */,
+				AFD3FF512892BEFA000A0F2C /* HistoryTransaction.swift in Sources */,
+				AFD3FF4F2892BED6000A0F2C /* HistoryViewCell.swift in Sources */,
 				AFBA4146288EEE2A0045BA53 /* RewardsGraphView.swift in Sources */,
 				AFC90EDF28888D5100F3EE21 /* AppDelegate.swift in Sources */,
 			);
