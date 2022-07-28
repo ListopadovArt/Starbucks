@@ -5,7 +5,7 @@ Educational project.
 Without using storyboards.
 
 
-https://user-images.githubusercontent.com/74622932/181587916-1af10894-88e1-4fb0-96dd-a5d50b054c02.MP4
+https://user-images.githubusercontent.com/74622932/181591247-6bf7158d-6c41-4b22-89ea-3577f3633949.MP4
 
 
 <table>
